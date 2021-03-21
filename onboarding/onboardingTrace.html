@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script defer src="../JS/index.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section class="header">
+        <div class="header-grid-container">
+            <img id="headerLogo" src="../images/CovidHeaderLogo@3x.png" alt="">
+            <button id="language" data-modal-target="#modal1">
+                <div class="languageContainer">
+                    <img id="flagOfCanada" src="../images/FlagofCanada.png" alt="">
+                    <p id="languageButton">English</p>
+                </div>
+            </button>
+        </div>
+    </section>
+    <section class="container">
+        <div class="onboarding">
+            <div class="circle">
+                <h1 id="exposureText">Your app is active</h1>
+
+
+            </div>
+            <h1 class="onboardingHeader">
+                Covid Alert Contact Tracing
+            </h1>
+            <p class="onboardingBody"> 
+Covid Alert helps us break the cycle of infection.
+<br><br>
+Make sure your app is turned on and working by checking for this message on your home screen. That way, we can take care of ourselves and protect our communities.
+            </p>
+        </div>
+    </section> 
+    <div class="modal1" id="modal1">
+        <div class="header utility">
+            <div class="header-grid-container">
+                <button data-close-button class="close-button" >Back</button>
+                <img id="headerLogo" src="../images/CovidHeaderLogo@3x.png" alt="">
+            </div>
+        </div>
+        <div class="utilityHeaderContainer">
+            <h1 class="utilityHeader ">Languages</h1>
+        </div>
+        <div class="utilityBody">
+            <button class="languageButton">
+                <p class="French">English</p>
+                <img class="French" src="../images/checkmark.png" alt="">
+
+            </button>
+            <button class="languageButton">
+                <p class="French">Francais</p>
+                <img class="French" src="" alt="">
+
+            </button>
+        </div>
+    </div>
+    <div class="modal" id="modal">
+        <div class="modalHeader">
+            <h1 class="alertHeader">Use “COVID Alert” for <br> Exposure Notification?</h1>
+        </div>
+        <div class="modalBody">
+            <p class="alertBody">Only one app at a time can notify you of potential exposure. Other apps’ ability to send exposure notifications will be turned off. The date, duration, and signal strength associated with possible exposures will be shared with “COVID Alert”</p>
+        </div>
+        <div class="alertButtonContainer">
+            <a class="alertButton left" href="onboardingQR.html"> 
+                <div class="alertButton">
+                    <h1 class="alertButton">Don't Enable</h1>
+                </div>
+            </a>
+            <a class="alertButton right" href="onboardingQR.html"> 
+                <div class="alertButton">
+                    <h1 class="alertButton">Enable</h1>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="" id="overlay"></div>
+    <div class="onboardingFooterContainer">
+        
+            <a id="Back" href="../index.html">Back</a>
+
+            <div class="pagination">
+                <div class="paginationPage" id="active"></div>
+                <div class="paginationPage" ></div>
+                <div class="paginationPage"></div>
+                <div class="paginationPage"></div>
+            </div>
+            <button id="Next" data-modal-target="#modal">Next</button>
+        
+        
+    </div>
+</body>
+</html>

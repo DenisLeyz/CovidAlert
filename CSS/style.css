@@ -1,0 +1,458 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+section.onboardingFooter {display: flex;
+    flex-direction: column;
+    justify-content: center;}
+
+a {
+    color: black;
+}
+
+
+#loadingLogo {margin: 0 auto;
+height: 142px;
+width: 102px;}
+
+#loadingScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    width: 100%;
+    margin: auto;
+}
+
+.loadingButtonGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 200px;
+    align-items: center;
+}
+
+h1.button {
+    text-align: center;
+    height: 40px;
+    width: 285px;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.16);
+    padding-top: 15px;
+    border: 1px solid #E3E2E2;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    border-radius: 40px;
+}
+
+a {text-decoration: none;
+cursor: pointer;}
+
+.header {
+    width: 100%;
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+}
+
+
+/* OnboardingTrace */
+
+.header-grid-container {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-areas: " . headerLogo language";
+    margin-top: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#headerLogo { 
+    width: 85px;
+height: 23px;
+margin: 0 auto;
+grid-area: headerLogo;}
+
+button#language {margin-left: auto;
+grid-area: language;
+margin:0 10px;
+display: flex;
+justify-content: space-between;
+width: 80px;
+margin-right: 20px;}
+button{
+    border: none;
+    background-color: inherit;
+    align-items: center;
+}
+
+.languageContainer {
+    display: flex;
+    justify-content:space-between;
+    padding: 0 10%;
+    text-align: center;
+    width: 65px;
+    align-items: center;
+    border: 1px solid #CCCCCC;
+    border-radius: 17px;
+}
+
+img#flagOfCanada {
+    width: 17px;
+    height: 9px;
+    margin: 0 4px;
+}
+
+#languageButton {
+    color: black;
+font-size: 12px;
+font-family: "Open Sans", sans-serif;}
+
+.container {
+    padding: 0 20px;
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+.onboarding {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+    align-items: center;
+    text-align: left;
+}
+
+.onboardingHeader {
+    text-align: left;
+    width: 100%;
+    margin: 40px 0 20px;
+
+}
+
+#onboarding1Img { 
+    width: 128px;
+    height: auto;
+}
+
+.circle {background-color: rgba(188, 239, 172, 1);
+	border-radius: 50%;
+	animation: pulse-red 2s infinite;
+	height: 128px;
+	width: 128px;
+display: flex;
+justify-content: center;
+align-items: center;}
+
+    @keyframes pulse-red {
+        0% {
+            transform: scale(0.9);
+            box-shadow: 0 0 0 0 rgba(188, 239, 172, 0.7);
+        }
+        
+        70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 10px rgba(188, 239, 172, 0);
+        }
+        
+        100% {
+            transform: scale(0.9);
+            box-shadow: 0 0 0 0 rgba(188, 239, 172, 0);
+        }
+    }
+
+#exposureText {font-size: 18px;
+text-align: center;}
+
+
+.onboardingFooterContainer {
+    display:flex;
+flex-direction: row;
+justify-content: space-between;
+padding: 0 20px 20px;
+position: absolute;
+left: 0;
+bottom: 0;
+width: 90%;
+max-width: 540px;
+border: 1px solid #CCCCCC;
+border-bottom: none;
+border-left: none;
+border-right: none;
+padding-top: 20px};
+
+
+
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 0 10px;
+
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paginationPage {
+    background-color: #6F7070;
+    width: 12px;
+    height: 12px;
+margin: 0 16px;
+border-radius: 50%;
+}
+
+#active {
+    background-color: #BE0404;
+    width: 18px;
+    height: 18px;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); 
+    background-color: rgba(242, 242, 242,0.9);
+    border-radius: 14px;
+    z-index: 2;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    transition: 100ms ease-in-out;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.alertHeader {
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 20px 5px;
+}
+
+.alertBody {
+    padding: 0 20px 5px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.alertButton {
+    font-size: 17px;
+    font-weight: 400;
+    color: #007AFF;
+
+}
+
+.alertButtonContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left right";
+    text-align: center;
+    
+    
+
+}
+
+.left {
+    grid-area: left;
+    padding: 12px 0;
+    border:1px solid #707070;
+    border-bottom-left-radius: 14px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.right {
+    grid-area: right;
+    padding: 12px 0;
+    border:1px solid #707070;
+    border-bottom-right-radius: 14px;
+    border-left:none;
+    border-right: none;
+    border-bottom: none;
+
+}
+
+#overlay {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+pointer-events: all;}
+
+.onboardingButton {background-color: inherit;
+border:none;
+font-size: 16px;}
+
+#Back {margin-right: auto;}
+#Next {margin-left: auto;
+background-color: inherit;
+color: black;
+font-size: 16px;
+border: none;}
+
+
+
+.modal1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scale(0);
+    transition: 150ms ease-in;
+    background-color: white;
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: 100ms ease-in-out;
+}
+
+.modal1.active {
+    transform: scale(1);
+}
+
+.utilityHeader {
+    font-size: 22px;
+    font-weight: 500;
+    margin: 16px 8px 46px
+}
+
+.utilityBody
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.languageButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 4px;
+    height: 60px;
+    border: 1px solid rgba(60, 60, 67, 0.37);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+.English {padding:0 12px;}
+
+.French {padding:0 12px;}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.alertHeader {
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 20px 5px;
+}
+
+.alertBody {
+    padding: 0 20px 5px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.alertButton {
+    font-size: 17px;
+    font-weight: 400;
+    color: #007AFF;
+
+}
+
+.alertButtonContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left right";
+    text-align: center;
+    
+    
+
+}
+
+.left {
+    grid-area: left;
+    padding: 12px 0;
+    border:1px solid #707070;
+    border-bottom-left-radius: 14px;
+}
+
+.right {
+    grid-area: right;
+    padding: 12px 0;
+    border:1px solid #707070;
+    border-bottom-right-radius: 14px;
+    border-left:none;
+
+}
+
+#overlay {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+pointer-events: all;} 
+
+
+/* Onboarding 2 */
+
+.onboardingGrid {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:"OnboardingI OnboardingI"
+    "OnboardingIc OnboardingB";
+    margin-top: 50px;
+}
+
+.OnboardingI {grid-area: OnboardingI;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+width: 80%;
+object-fit: contain;}
+
+.OnboardingB {grid-area: OnboardingB;
+    margin-top: 20px;}
+
+.OnboardingIc {grid-area: OnboardingIc;
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin-top: 20px;}

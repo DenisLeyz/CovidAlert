@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script defer src="../JS/index.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section class="header">
+        <div class="header-grid-container">
+            <img id="headerLogo" src="../images/CovidHeaderLogo@3x.png" alt="">
+            <button id="language" data-modal-target="#modal1">
+                <div class="languageContainer">
+                    <img id="flagOfCanada" src="../images/FlagofCanada.png" alt="">
+                    <p id="languageButton">English</p>
+                </div>
+            </button>
+        </div>
+    </section>
+    <section class="container">
+        <div class="onboardingGrid">
+            <div class="OnboardingI">
+                <img src="../images/onobardingKey.png" alt="">
+            </div>
+            <div class="OnboardingB">
+                <h1 class="onboardingHeader">
+                    QR Code Check in</h1>
+                <p class="onboardingBody"> 
+                    Use the QR code scanner to check into places like bars and restaurants without having to fill out any forms.
+</p>
+            </div>
+            <div class="OnboardingIc">
+                <img src="../images/KeyActual.png" alt="">
+            </div>
+
+            
+            
+        </div>
+    </section> 
+    <div class="modal1" id="modal1">
+        <div class="header utility">
+            <div class="header-grid-container">
+                <button data-close-button class="close-button" >Back</button>
+                <img id="headerLogo" src="../images/CovidHeaderLogo@3x.png" alt="">
+            </div>
+        </div>
+        <div class="utilityHeaderContainer">
+            <h1 class="utilityHeader ">Languages</h1>
+        </div>
+        <div class="utilityBody">
+            <button class="languageButton">
+                <p class="French">English</p>
+                <img class="French" src="../images/checkmark.png" alt="">
+
+            </button>
+            <button class="languageButton">
+                <p class="French">Francais</p>
+                <img class="French" src="" alt="">
+
+            </button>
+        </div>
+    </div>
+    
+    <div class="onboardingFooterContainer">
+        
+            <a id="Back" href="onboardingRestrict.html">Back</a>
+
+            <div class="pagination">
+                <div class="paginationPage" ></div>
+                <div class="paginationPage" ></div>
+                <div class="paginationPage"></div>
+                <div class="paginationPage"id="active"></div>
+            </div>
+            <a id="Next" href="../main.html" >Next</a>
+        
+        
+    </div>
+</body>
+</html>
