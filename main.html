@@ -16,35 +16,24 @@
 <body>
     <section class="header">
         <div class="header-grid-container">
-            <img id="headerLogo" src="../images/CovidHeaderLogo@3x.png" alt="">
+            <button id="settings" data-modal-target="#modal2">
+                <div class="settingsContainer">
+                    <img id="settingsIcon" src="images/cog-solid@3x.png" alt="">
+                </div>
+            </button>
+            <img id="headerLogo" src="images/CovidHeaderLogo@3x.png" alt="">
             <button id="language" data-modal-target="#modal1">
                 <div class="languageContainer">
-                    <img id="flagOfCanada" src="../images/FlagofCanada.png" alt="">
+                    <img id="flagOfCanada" src="images/FlagofCanada.png" alt="">
                     <p id="languageButton">English</p>
                 </div>
             </button>
         </div>
     </section>
-    <section class="container">
-        <div class="onboardingGrid">
-            <div class="OnboardingI">
-                <img src="../images/onobardingKey.png" alt="">
-            </div>
-            <div class="OnboardingB">
-                <h1 class="onboardingHeader">
-                    QR Code Check in</h1>
-                <p class="onboardingBody"> 
-                    Use the QR code scanner to check into places like bars and restaurants without having to fill out any forms.
-</p>
-            </div>
-            <div class="OnboardingIc">
-                <img src="../images/KeyActual.png" alt="">
-            </div>
 
-            
-            
-        </div>
-    </section> 
+
+<!-- modals -->
+
     <div class="modal1" id="modal1">
         <div class="header utility">
             <div class="header-grid-container">
@@ -68,20 +57,47 @@
             </button>
         </div>
     </div>
-    
-    <div class="onboardingFooterContainer">
-        
-            <a id="Back" href="onboardingRestrict.html">Back</a>
 
-            <div class="pagination">
-                <div class="paginationPage" ></div>
-                <div class="paginationPage" ></div>
-                <div class="paginationPage"></div>
-                <div class="paginationPage"id="active"></div>
-            </div>
-            <a id="Next" href="../main.html" >Next</a>
-        
-        
+<!-- modals end here -->
+
+
+<section class="mainPageContainer">
+    <div class="currentLocationContainer">
+        <img id="locationIcon" src="images/location@3x.png" alt="">
+        <div class="locationBodyContainer">
+            <p class="locationPlace">Brampton, ON</p>
+            <h1 class="locationTier">Tier 1</h1>
+        </div>
+
     </div>
+    <div class="circle circleMain">
+        <h1 id="exposureText">Your app is active</h1>
+
+
+    </div>
+    <div class="loadingButtonGroup mainMenu">
+        <a class="mainButton" href="QRCodeScan.html">
+            <div class="buttonContainer">
+                <img class="mainButtonImage" src="images/QR code.png" alt="">
+                <h1 class="buttonText">QR Code Check in</h1>
+            </div>
+        </a>
+        <a class="mainButton" href="oneTimeKey.html">
+            <div class="buttonContainer">
+                <img class="mainButtonImage" src="images/KeyActual.png" alt="">
+                <h1 class="buttonText">Enter your Covid testing code</h1>
+            </div>
+        </a>
+        <a class="mainButton">
+            <div class="buttonContainer">
+                <img class="mainButtonImage" src="images/Key.png" alt="">
+                <h1 class="buttonText">Check restriction information</h1>
+            </div>
+        </a>
+
+    </div>
+
+</section>
+    
 </body>
 </html>

@@ -73,8 +73,10 @@ cursor: pointer;}
 #headerLogo { 
     width: 85px;
 height: 23px;
-margin: 0 auto;
-grid-area: headerLogo;}
+margin:auto;
+grid-area: headerLogo;
+display: flex;
+flex-direction: column;}
 
 button#language {margin-left: auto;
 grid-area: language;
@@ -92,7 +94,7 @@ button{
 .languageContainer {
     display: flex;
     justify-content:space-between;
-    padding: 0 10%;
+    padding: 5% 10%;
     text-align: center;
     width: 65px;
     align-items: center;
@@ -130,7 +132,14 @@ font-family: "Open Sans", sans-serif;}
     text-align: left;
     width: 100%;
     margin: 40px 0 20px;
+    font-size: 20px;
 
+}
+
+
+.onboardingBody {
+    font-size: 18px;
+    text-align: left;
 }
 
 #onboarding1Img { 
@@ -456,3 +465,164 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 margin-top: 20px;}
+
+
+
+/* main page */
+
+
+
+#settingsIcon {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    margin:auto
+}
+
+.mainPageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 88.5vh;
+    background-color: #EFEFEF;
+}
+
+.currentLocationContainer {
+    background-color: #BCEFAC;
+    width: 250px;
+    height: 70px;
+    margin: 25px auto 80px;
+    text-align: center;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px 20px
+}
+
+#locationIcon {
+    width: 17.5px;
+    height: 23.5px;
+    padding:0 20px
+}
+
+.locationBodyContainer {
+    padding:0 20px
+}
+
+.locationPlace {
+    font-size: 14px;
+    font-weight: 800;
+    padding: 10px 0 5px;
+}
+
+.locationTier {
+    font-size: 22px;
+    font-weight: 800;
+    padding: 5px 0 10px;
+}
+
+.mainMenu {
+    margin-top: 100px;
+
+}
+
+.buttonContainer {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-areas: "mainButtonImage buttonText";
+}
+
+h1.button {
+    
+    flex-direction: row;
+    height: 40px;
+    width: 285px;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.16);
+    padding-top: 15px;
+    border: 1px solid #E3E2E2;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    border-radius: 40px;
+}
+
+.mainButton {
+    width: 100%;
+    max-width: 360px;
+    border: 1px solid #E3E2E2;
+    border-radius: 40px;
+    margin: 10px 0;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.mainMenu {width: 80%;}
+
+.mainButtonImage {
+    grid-area: mainButtonImage;
+    margin: auto;
+}
+
+.buttonText {
+    font-size: 18px;
+    font-weight: 600;
+    width: 175px;
+    grid-area: buttonText;
+    margin: auto;
+    text-align: center;
+}
+
+
+/* One time key direct page */
+
+.oneTimeKeySection {
+padding: 0 20px;
+text-align: center;
+margin: 40px auto 0;
+max-width: 540px;
+}
+
+.keyList {
+    padding: 5px 20px 40px
+}
+
+li {margin: 20px 0;}
+
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width:80%;
+    margin: 0 auto;
+}
+
+#keyHeader {text-align: center;}
+
+input {
+    height: 50px;
+    margin:10px 0;
+}
+
+#keyInput {
+    background-color: #EFEFEF;
+    border: 1px solid #E3E2E2;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+#keySubmit {
+background-color: #BE0404;
+color: white;
+font-size: 18px;
+font-weight: 700;
+border-radius: 28px;
+}
+
+.close-button {
+    text-align: left;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+
