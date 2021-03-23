@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="header utility">
+        <div class="header-grid-container">
+            <a class="close-button" href="main.html" >Back</a>
+            <img id="headerLogo" src="images/CovidHeaderLogo@3x.png" alt="">
+        </div>
+    </div>
+
+
+
+
+
+
+<section class="RestrictionsSection">
+    <div class="ColorCodeGrid">
+        <div class="ColorGridItem item1" >
+            <div>
+                <h1 class="ColorGridText">Prevent <br> <b> 1</b></h1>
+            </div>
+        </div>
+        <div class="ColorGridItem item2">
+            <div>
+                <h1 class="ColorGridText">Protect <br><b> 2</b></h1>
+            </div>
+        </div>
+        <div class="ColorGridItem item3">
+            <div>
+                <h1 class="ColorGridText">Restrict <br><b> 3</b></h1>
+            </div>
+        </div>
+        <div class="ColorGridItem item4">
+            <div>
+                <h1 class="ColorGridText">Control <br><b> 4</b></h1>
+            </div>
+        </div>
+        <div class="ColorGridItem item5">
+            <div>
+                <h1 class="ColorGridText">Lockdown <br><b> 5</b></h1>
+            </div>
+        </div>
+    </div>
+    <div class="currentLocationContainer" id="RestrictionsLoc">
+        <img id="locationIcon" src="images/location@3x.png" alt="">
+        <div class="locationBodyContainer">
+            <p class="locationPlace">Brampton, ON</p>
+            <h1 class="locationTier">Tier 1</h1>
+        </div>
+
+    </div>
+    <div class="RestrictGroupGrid">
+            <button data-modal-target="#modalR1" class=" RestrictGroupCard card1">
+                <img class="RestrictGroupImg" src="images/OrgEvents@2x.png" alt="">
+                <p class="RestrictGroupText">Organized social events</p>
+            </button>
+            <button data-modal-target="#modalR2" class=" RestrictGroupCard card2">
+                <img class="RestrictGroupImg" src="images/FoodNDrink@2x.png" alt="">
+                <p class="RestrictGroupText">Food & Drink establishments</p>
+            </button>
+            <button data-modal-target="#modalR3" class=" RestrictGroupCard card3">
+                <img class="RestrictGroupImg" src="images/Sport@2x.png" alt="">
+                <p class="RestrictGroupText">Sports & fitness </p>
+            </button>
+            <button data-modal-target="#modalR4" class=" RestrictGroupCard card4">
+                <img class="RestrictGroupImg" src="images/Meetingp@2x.png" alt="">
+                <p class="RestrictGroupText">Meeting & event spaces</p>
+            </button>
+            <button data-modal-target="#modalR5" class=" RestrictGroupCard card5">
+                <img class="RestrictGroupImg" src="images/Retail@2x.png" alt="">
+                <p class="RestrictGroupText">Retail</p>
+            </button>
+            <button data-modal-target="#modalR6" class=" RestrictGroupCard card6">
+                <img class="RestrictGroupImg" src="images/PersonalC@2x.png" alt="">
+                <p class="RestrictGroupText">Personal care services</p>
+            </button>
+            <button data-modal-target="#modalR7" class=" RestrictGroupCard card7">
+                <img class="RestrictGroupImg" src="images/Gambling@2x.png" alt="">
+                <p class="RestrictGroupText">Gambling establishments</p>
+            </button>
+            <button data-modal-target="#modalR8" class=" RestrictGroupCard card8">
+                <img class="RestrictGroupImg" src="images/Cinemas@2x.png" alt="">
+                <p class="RestrictGroupText">Cinemas</p>
+            </button>
+            <button data-modal-target="#modalR9" class=" RestrictGroupCard card9">
+                <img class="RestrictGroupImg" src="images/Perform@2x.png" alt="">
+                <p class="RestrictGroupText">Performing arts facilities</p>
+            </button>
+
+    </div>
+    <div class="RestrictionFooter">
+        <h1 class="RestrictionText">Didn't find what you were looking for?</h1>
+        <a class="RestrictionLink" href="">Go to Canada.ca for more information<br></a>
+    </div>
+
+
+<!-- modals -->
+<div class="" id="overlay"></div> 
+
+
+<div class="modal" id="modalR1">
+    <div class="modalHeader">
+        <h1 class="alertHeader">Organized Social Events</h1>
+    </div>
+    <div class="modalBody">
+        <ul class="alertBody">
+            <li class="RestrictionList">
+                <span class="RestrictionsCardSubheading"> Social gatherings:</span> <br>
+                Indoors - 10 people <br>
+                Outdoors - 25 people
+            </li>
+            <li class="RestrictionList">
+                <span class="RestrictionsCardSubheading">Staffed businesses and facilities:</span> <br>
+            Indoors - 50 people <br>
+            Outdoors - 100 people
+            </li>
+            <li class="RestrictionList">
+                <span class="RestrictionsCardSubheading">Religious services:</span> <br>
+                Indoors - 30% capacity <br>
+                Outdoors - 100 people
+
+            </li>
+        </ul>
+    </div>
+    
+    <button data-close-button class="RestrictionOverlayClose" >Thanks, got it!
+    </button>
+    
+</div>
+
+
+<div class="modal" id="modalR2">
+    <div class="modalHeader">
+        <h1 class="alertHeader">Food & drink establishments</h1>
+    </div>
+    <div class="modalBody">
+        <ul class="alertBody">
+            <li class="RestrictionList">
+                No buffet service
+            </li>
+            <li class="RestrictionList">
+                Face coverings except for when eating
+            </li>
+            <li class="RestrictionList">
+                2 meter physical distancing
+            </li>
+            <li class="RestrictionList">
+                Nightclubs can operate only as restaurants & bars
+            </li>
+            <li class="RestrictionList">
+                Dancing, singing, & karaoke is permitted with restrictions
+            </li>
+            <li class="RestrictionList">
+                2 meter physical distancing
+            </li>
+        </ul>
+    </div>
+    
+    <button data-close-button class="RestrictionOverlayClose" >Thanks, got it!
+    </button>
+    
+</div>
+
+<div class="modal" id="modalR3">
+    <div class="modalHeader">
+        <h1 class="alertHeader">Sports & fitness facilities</h1>
+    </div>
+    <div class="modalBody">
+        <ul class="alertBody">
+            <li class="RestrictionList">
+                <span class="RestrictionsCardSubheading"> People in classes & spectators:</span> <br>    
+                Indoors - 50 people <br>
+                Outdoors - 100 people
+            </li>
+            <li class="RestrictionList">
+                Sports must be modified to avoid physical contact
+            </li>
+            <li class="RestrictionList">
+                Exemptions for high-performance athletes
+            </li>
+            <li class="RestrictionList">
+                Face coverings except for when exercising
+            </li>
+            <li class="RestrictionList">
+                Patron screening
+            </li>
+            <li class="RestrictionList">
+                2 meter physical distancing
+            </li>
+        </ul>
+    </div>
+    
+    <button data-close-button class="RestrictionOverlayClose" >Thanks, got it!
+    </button>
+    
+</div>
+
+<div class="modal" id="modalR4">
+    <div class="modalHeader">
+        <h1 class="alertHeader">Meeting & event spaces</h1>
+    </div>
+    <div class="modalBody">
+        <ul class="alertBody">
+            <li class="RestrictionList">
+                <span class="RestrictionsCardSubheading"> Capacity limits for venues:</span> <br>    
+                Indoors - 50 people <br>
+                Outdoors - 100 people
+            </li>
+            <li class="RestrictionList">
+                Exceptions for court and government services.
+
+            </li>
+            <li class="RestrictionList">
+                Patron screening
+            </li>
+        </ul>
+    </div>
+    
+    <button data-close-button class="RestrictionOverlayClose" >Thanks, got it!
+    </button>
+    
+</div>
+
+<div class="modal" id="modalR5">
+    <div class="modalHeader">
+        <h1 class="alertHeader">Retail</h1>
+    </div>
+    <div class="modalBody">
+        <ul class="alertBody">
+            <li class="RestrictionList">
+                Passive Screening for patrons
+            </li>
+            <li class="RestrictionList">
+                Fitting rooms limited to non-adjacent stalls 
+
+            </li>
+            <li class="RestrictionList">
+                2 meter social distancing and face coverings required
+            </li>
+        </ul>
+    </div>
+    
+    <button data-close-button class="RestrictionOverlayClose" >Thanks, got it!
+    </button>
+    
+</div>
+
+
+<div class="modal" id="modalR6">
+    <div class="modalHeader">
+        <h1 class="alertHeader">Personal Care facilities</h1>
+    </div>
+    <div class="modalBody">
+        <ul class="alertBody">
+            <li class="RestrictionList">
+                Oxygen rooms, steam rooms, and saunas are closed
+            </li>
+            <li class="RestrictionList">
+                Patron screening
+            </li>
+        </ul>
+    </div>
+    
+    <button data-close-button class="RestrictionOverlayClose" >Thanks, got it!
+    </button>
+    
+</div>
+
+
+<div class="modal" id="modalR7">
+    <div class="modalHeader">
+        <h1 class="alertHeader">Gambling establishments</h1>
+    </div>
+    <div class="modalBody">
+        <ul class="alertBody">
+            <li class="RestrictionList">
+                50 people per facility limit
+            </li>
+            <li class="RestrictionList">
+                No table games
+            </li>
+            <li class="RestrictionList">
+                Patron screening
+            </li>
+            <li class="RestrictionList">
+                2 meter social distancing and face coverings required
+            </li>
+        </ul>
+    </div>
+    
+    <button data-close-button class="RestrictionOverlayClose" >Thanks, got it!
+    </button>
+    
+</div>
+
+<div class="modal" id="modalR8">
+    <div class="modalHeader">
+        <h1 class="alertHeader">Cinemas</h1>
+    </div>
+    <div class="modalBody">
+        <ul class="alertBody">
+            <li class="RestrictionList">
+                <span class="RestrictionsCardSubheading"> Capacity limits:</span> <br>    
+                Indoors - 50 people <br>
+                Outdoors - 100 people
+            </li>
+            <li class="RestrictionList">
+                Face covering except when eating & drinking
+
+            </li>
+            <li class="RestrictionList">
+                Patron screening
+            </li>
+            <li class="RestrictionList">
+                Drive-in cinemas permitted to operate with restrictions
+            </li>
+        </ul>
+    </div>
+    
+    <button data-close-button class="RestrictionOverlayClose" >Thanks, got it!
+    </button>
+    
+</div>
+
+<div class="modal" id="modalR9">
+    <div class="modalHeader">
+        <h1 class="alertHeader">Performing arts facilities</h1>
+    </div>
+    <div class="modalBody">
+        <ul class="alertBody">
+            <li class="RestrictionList">
+                <span class="RestrictionsCardSubheading"> Capacity limits:</span> <br>    
+                Indoors - 50 people <br>
+                Outdoors - 100 people
+            </li>
+            <li class="RestrictionList">
+                Face covering except when eating & drinking
+
+            </li>
+            <li class="RestrictionList">
+                Patron screening
+            </li>
+            <li class="RestrictionList">
+                Singers & players must be separated from spectators by a protective barrier
+            </li>
+            <li class="RestrictionList">
+                2 meter social distancing except during performances
+            </li>
+        </ul>
+    </div>
+    
+    <button data-close-button class="RestrictionOverlayClose" >Thanks, got it!
+    </button>
+    
+</div>
+
+
+
+
+
+
+    <!-- <div class="modalR1" id="modalR1">
+        <div class="modalHeader">
+            <h1 class="alertHeader">Allow Covid Allert access to location?</h1>
+        </div>
+        <div class="modalBody">
+            <ul class="alertBody">
+                <li class="RestrictionList">
+                    <span class="RestrictionsCardSubheading"> Social gatherings:</span> <br>
+                    Indoors - 10 people <br>
+                    Outdoors - 25 people
+                </li>
+                <li class="RestrictionList">
+                    <span class="RestrictionsCardSubheading">Staffed businesses and facilities:</span> <br>
+                Indoors - 50 people <br>
+                Outdoors - 100 people
+                </li>
+                <li class="RestrictionList">
+                    <span class="RestrictionsCardSubheading">Religious services:</span> <br>
+                    Indoors - 30% capacity <br>
+                    Outdoors - 100 people
+
+                </li>
+
+                
+            </ul>
+            <div>
+            <button data-close-button class="RestrictionOverlayClose" >Thanks, got it!</button>
+            </div>
+        </div>
+        
+        
+    </div>
+    <div class="" id="overlay"></div> -->
+
+
+<!-- modals end here -->
+</section>
+
+
+
+
+
+
+    <script defer src="JS/index.js"></script>
+</body>
+</html>
