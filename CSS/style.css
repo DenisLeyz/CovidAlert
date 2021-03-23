@@ -8,6 +8,10 @@ button {
     outline: none;
 }
 
+body {
+    min-width: 100%;
+}
+
 section {
     min-height: fit-content;
     margin: 0 auto;
@@ -30,6 +34,9 @@ a {
     color: black;
 }
 
+.loadingButtonGroupItem {
+    margin: 20px 0;
+}
 
 #loadingLogo {margin: 0 auto;
 height: 142px;
@@ -52,6 +59,7 @@ width: 102px;}
     width: 100%;
     margin: auto;
 }
+
 
 
 
@@ -89,15 +97,16 @@ cursor: pointer;}
 }
 
 
+
+
 /* OnboardingTrace */
 
 .header-grid-container {
     display: grid;
     grid-template-columns: 0.5fr 1fr 0.5fr;
     grid-template-areas: " . headerLogo language";
-    margin-top: 50px;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin: 50px auto 0;
+    max-width: 540px;
 }
 
 #headerLogo { 
@@ -153,11 +162,15 @@ font-family: "Open Sans", sans-serif;}
 .onboarding {
     display: flex;
     flex-direction: column;
-    margin:30px 0 20px;
+    margin-top:30px;
+    margin-bottom: 20px;
     min-height: 400px;
     align-items: center;
     text-align: left;
 }
+
+.CircleContainer {width: 128px;
+height: 128px;}
 
 .onboardingHeader {
     text-align: left;
@@ -232,10 +245,12 @@ color: red;}
 flex-direction: row;
 justify-content: space-between;
 padding: 0 20px 20px;
-position: absolute;
-margin-top: auto;
+margin: auto;
+margin-bottom: 0;
+
+/* position: absolute;
 left: 0;
-bottom: 0;
+bottom: 0; */
 width: 90%;
 max-width: 540px;
 border: 1px solid #CCCCCC;
@@ -243,6 +258,14 @@ border-bottom: none;
 border-left: none;
 border-right: none;
 padding-top: 20px;}
+
+#onboardingSection {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh !important;
+    justify-content: space-between;
+}
+
 
 
 
@@ -399,13 +422,17 @@ border: none;}
 .utilityHeader {
     font-size: 22px;
     font-weight: 500;
-    margin: 16px 8px 32px
+    margin: 16px auto 32px;
+    max-width: 540px;
 }
 
 .utilityBody
 {
     display: flex;
     flex-direction: column;
+    max-width: 540px;
+    width: 100%;
+    margin:0 auto;
 }
 
 .languageButton {
@@ -499,7 +526,6 @@ pointer-events: all;}
     grid-template-areas:"OnboardingI OnboardingI"
     "OnboardingIc OnboardingB";
     margin-top: 100px;
-    min-height: 400px;
 }
 
 .OnboardingI {grid-area: OnboardingI;
@@ -1225,7 +1251,7 @@ pointer-events: all;}
         display: flex;
         flex-direction: column;
         text-align: center;
-        max-width: 75px;
+        width: 100%;
         height: 60px;
         display: flex;
         justify-content: center;
