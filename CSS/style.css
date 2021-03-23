@@ -4,6 +4,15 @@
     font-family: "Open Sans", sans-serif;
 }
 
+button {
+    outline: none;
+}
+
+.ExtraBottomMargin {
+    margin-bottom: 120px;
+}
+
+html {height: 100%;}
 section.onboardingFooter {display: flex;
     flex-direction: column;
     justify-content: center;}
@@ -182,7 +191,8 @@ text-align: center;}
 flex-direction: row;
 justify-content: space-between;
 padding: 0 20px 20px;
-position: absolute;
+position: relative;
+margin-top: 140px;
 left: 0;
 bottom: 0;
 width: 90%;
@@ -191,9 +201,10 @@ border: 1px solid #CCCCCC;
 border-bottom: none;
 border-left: none;
 border-right: none;
-padding-top: 20px};
+padding-top: 20px;}
 
-
+.onboardingGrid {height: 50vh;}
+.onboarding {height: 50vh;}
 
 
 .footer {
@@ -304,6 +315,7 @@ border-radius: 50%;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     pointer-events: none;
+    height: 100%;
 }
 
 #overlay.active {
@@ -523,7 +535,7 @@ margin-top: 20px;}
 }
 
 .mainMenu {
-    margin-top: 100px;
+    margin-top: 60px;
 
 }
 
@@ -589,7 +601,7 @@ max-width: 540px;
 
 li {margin: 20px 0;}
 
-form{
+.keySubmitForm{
     display: flex;
     flex-direction: column;
     max-width: 400px;
@@ -619,10 +631,511 @@ font-weight: 700;
 border-radius: 28px;
 }
 
+#QRSave {
+    background-color: #BE0404;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 28px;
+    min-width: 260px;
+    max-width: 540px;
+    }
+
 .close-button {
     text-align: left;
     padding-left: 10px;
     font-size: 16px;
 }
 
+/* QR code page 1 */
 
+.QRSection {
+    padding: 0 20px;
+    text-align: center;
+    margin: 40px auto 0;
+    max-width: 540px;
+    height: 84vh;
+    }
+
+
+.QRSubmit {
+    height: 50px;
+    font-size: 18px;
+    width: auto;
+    margin-top: 60px;
+}
+
+.QRMake {
+    margin-top: 40px;
+}
+
+#buttonText {
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+
+/* QRCode page 2 */
+
+.QRformContainer {
+    background-color: white;
+    box-shadow: 0 0 6px #C4C4C4;
+    border-radius: 22px;
+    padding: 16px 8px;
+}
+
+#QRC2Header {
+    text-align: center;
+    margin: 16px 8px;
+}
+
+.QRCodeForm {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.QRInput {
+    margin: 0;
+    border-radius: 5px;
+    border: 1px solid #E3E2E2;
+    padding: 0 10px;
+}
+
+#QRC2Body {
+    font-size: 12px;
+text-align: center;
+width: 80%;
+margin: 0 auto;}
+
+label {text-align: left;
+margin-top: 16px;
+font-size: 18;
+font-weight: 600;}
+
+.QRCodeInfoContainer {
+    margin: 40px auto 0;
+    text-decoration: underline;
+    width: 80%;
+}
+
+.QRModal {
+    display: flex;
+    flex-direction: column;
+    transform: scale(0);
+    animation: 200ms;
+    
+}
+
+.QRModal.active {
+    transform: scale(1);
+}
+
+
+
+#YourQRCodeImage {
+    width: 222px;
+    height: 222px;
+    margin: 0 auto;
+}
+
+#CodeModalHeader {
+    margin: 40px 0 10px;
+}
+
+#CodeModalBody1 {
+    font-size: 20px;
+    padding: 10px 0 0;
+    font-weight: 500;
+}
+
+#CodeModalBody2 {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
+.CreateYourQRButton {
+    width: 100%;
+
+    background-color: #BE0404;
+}
+
+#buttonText {color: white;}
+
+#QCSubmit {
+    background-color: white;}
+
+.QRModal2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translate(-50%, -50%) scale(0); 
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.QRModal2.active {
+    transform: scale(1);
+}
+
+.QRModal2Img {
+    width: 250px;
+    height: 250px;
+    
+
+}
+.QRModal2ImgContainer {
+    padding: 20px;
+    background-color: white;
+}
+
+
+.QRModal2Menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #EDECEE;
+    width: 240px;
+    margin: 40px 0 0;
+    border-radius: 21px;
+    margin-right: auto;
+    align-items: flex-end;
+    margin-left: 10px;
+}
+
+.QRModal2MenuItem {
+    height: 30px;
+    display: flex;
+    width: 220px;
+    flex-direction: row;
+    padding: 10px 10px ;
+    margin: 0 ;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #707070;
+}
+
+.QRModal2ItemImg {
+    width: 25px;
+    height: 25px;
+}
+
+
+#QROverlay {
+        position: absolute;
+        opacity: 0;
+        height: 150vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        pointer-events: none;
+        z-index: 2;
+    }
+
+#QROverlay.active {
+        opacity: 1;
+    pointer-events: all;}
+
+
+    .toggle-container {
+        position: relative;
+        display: inline-block;
+        width: 80px;
+        height: 40px;
+        pointer-events: none;
+    
+    }
+    .toggle-container input {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: all;
+        
+    }
+    .slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+        background-color: #808080;
+        transition: 0.4s;
+        pointer-events: none;
+        border-radius: 25px;
+    }
+
+    .slider::before {
+        content: "";
+        position: absolute;
+        height: 24px;
+        width: 24px;
+        left: 8px;
+        bottom: 8px;
+        background-color: #fff;
+        transition: 0.2s;
+        pointer-events: none;
+        border-radius: 50%;
+        
+    }
+
+    .slider::after {
+        position: absolute;
+        content: "off";
+        height: 24px;
+        width: 24px;
+        right: 10px;
+        bottom: 6px;
+        transition: 0.2s;
+        pointer-events: none;
+        color: #fff;
+        padding-left: 10px;
+    }
+
+    input:checked + .slider {
+        background-color: #45da18;
+    }
+    input:checked + .slider:before {
+        transform: translateX(40px);
+    }
+
+    input:checked + .slider:after {
+        content: "on";
+        left: 8px;
+    }
+
+    .SettingsMenu {
+        max-width: 560px;
+        margin:0 auto;
+        display: flex;
+        flex-direction: column;
+    justify-content: center;
+align-items: center;    
+padding: 0 20px;
+position: relative;}
+
+    .SettingsStatus {
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+align-items: center;  
+width: 75%;
+    }
+
+.SettingsCircle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #34C759;
+    margin: 20px auto;
+    
+    animation: settingStatus 3s infinite;
+}
+@keyframes settingStatus {
+    0% {
+        transform: scale(1);  
+    }
+    
+    50% {
+        transform: scale(0.8);    }
+    
+    100% {
+        transform: scale(1);
+    
+    }
+}
+
+#SettingsStatusBody {
+    text-align: center;
+    margin: 10px 0 0;
+}
+
+.SettingsButtonContainer {
+    height: 60px;
+    border: 1px solid #707070;
+    border-radius: 28px;
+    min-width: 320px;
+    max-width: 520px;
+    margin: 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.disabled {
+    color: #CCCCCC;
+    border-color: #CCCCCC;
+}
+
+.important {
+    background-color: #EFEFEF;
+}
+
+.SettingsButtonIcon {
+    width: 10px;
+    height: 15px;
+}
+
+.SettingsButton {
+    display: flex;
+    justify-content: center;
+}
+
+.SettingsButtonIconAlt {
+    width: 15px;
+    height: 15px;
+}
+
+.SettingsButtonIconContainer {
+    margin: auto 0;
+
+    
+}
+.SettingsButtonIconContainer2 {
+    margin: auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+}
+
+
+
+.SettingsButtonText {
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0 10px;
+}
+
+.SettingsH {
+    width:80%;
+    max-width: 540px;
+    margin: 20px auto 10px;
+    padding: 0 20px;
+    
+}
+
+h1#SettingsH1{
+    text-align: left;
+    font-size: 28px;
+    font-weight: lighter;
+}
+h1#SettingsH2{
+    text-align: left;
+    font-size: 28px;
+    font-weight: lighter;
+}
+
+.LastButton {
+    margin-bottom: 100px;
+}
+
+
+
+#overlay1 {
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+#SettingsOverlay.active {
+    opacity: 1;
+pointer-events: all;} 
+
+.modal4 {
+    position: fixed;
+    top: 30%;
+    left: 14%;
+    transform: translate(-50%, -50%) scale(0); 
+    background-color: rgba(242, 242, 242,0.9);
+    border-radius: 14px;
+    z-index: 4;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    transition: 100ms ease-in-out;}
+
+.modal4.active {
+    transform: scale(1);
+}
+
+
+#ToggleImage {
+    width: 50px;
+    height: 30px;
+}
+
+.ToggleImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlayS {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    height: 120%;
+}
+
+#overlayS.active {opacity: 1;
+    pointer-events: all;
+
+}
+
+.CovidSettingsButton {
+    width: 50px;
+    height: 30px;
+    background-color: #34C759;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    justify-content: flex-end;
+
+}
+
+.CovidSettingsButtonSlider {
+    width: 21px;
+    height: 21px;
+    background-color: white;
+    border-radius: 50%;
+    
+}
+
+
+.yes {
+    font-weight: 600;
+
+}
+
+.SettingsCircleOff {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #CCCCCC;
+        margin: 20px auto;
+    }

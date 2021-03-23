@@ -3,6 +3,7 @@ const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
 
 
+
 openModalButtons.forEach(button => { 
   button.addEventListener('click', () => {
     const modal = document.querySelector(button.dataset.modalTarget)
@@ -12,7 +13,7 @@ openModalButtons.forEach(button => {
 
 closeModalButtons.forEach(button => { 
   button.addEventListener('click', () => {
-    const modal = button.closest('.modal, .modal1')
+    const modal = button.closest('.modal, .modal1, .QRModal, .QRModal2, .modal4')
     closeModal(modal)
   })
 })
@@ -30,3 +31,4 @@ function closeModal(modal) {
   modal.classList.remove('active')
   overlay.classList.remove('active')
 }
+

@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section class="header utility">
+        <div class="header-grid-container">
+            <a href="QRCodePage1.html">Back</a>
+            <img id="headerLogo" src="../images/CovidHeaderLogo@3x.png" alt="">
+        </div>
+    </section>
+
+
+
+
+
+<section class="QRSection">
+    <div class="QRformContainer">
+        <h1 class="onboardingHeader" id="QRC2Header">Fill Information</h1>
+        <p class="onboardingBody" id="QRC2Body">Your information will used by Health of Canada, for QR code system only</p>
+        <form class="QRCodeForm" action="">
+            <label for="name">Name</label>
+            <input class="QRInput" type="text" id="name" name="name">
+            <label for="phone">Phone number</label>
+            <input class="QRInput" type="tel" id="phone" name="phone">
+            <label for="address">Your Address</label>
+            <input class="QRInput" type="text" id="address" name="address">
+        </form>
+    </div>
+    <button id="CreateYourQR" data-modal-target="#QRModal">
+        <div id="QRSave" class="QRMake">
+                
+            <h1 id="buttonText">Create code</h1>
+            </div>
+    </button>
+
+<!-- modals here -->
+<div class="QRModal YourQRCodeContainer" id="QRModal">
+    <h1 id="CodeModalHeader">Here is your code:</h1>
+    <div id="QCSubmit" class="QRSave YourQRCodeImage">
+        <button id="SaveYourQR" data-modal-target="#QRModal2">
+        <img  src="images/QRCode.png" alt="">
+        </button>
+    </div>
+    
+    <p id="CodeModalBody1"> Tap this image to save it.</p>
+    <p id="CodeModalBody2"> Tip: you can resuse it in the future!</p>
+</div>
+
+<div class="QRModal2" id="QRModal2">
+    <div class="QRModal2ImgContainer">
+        <img class="QRModal2Img" src="images/QRCode@3x.png" alt="">
+    </div>
+    <button data-close-button class="close-button QRModal2Menu">
+        <div class="QRModal2MenuItem">
+            <p>Share…</p>
+            <img class="QRModal2ItemImg" src="images/ShareIosIcons.png" alt="">
+        </div>
+        <div class="QRModal2MenuItem">
+            <p>Add to photos</p>
+            <img class="QRModal2ItemImg" src="images/SaveIosIcons.png" alt="">
+        </div>
+        <div class="QRModal2MenuItem">
+            <p>Copy</p>
+            <img class="QRModal2ItemImg" src="images/CopyIosIcons.png" alt="">
+        </div>
+    </button>>
+
+</div>
+<div class="" id="QROverlay"></div>
+
+<!-- modals ends -->
+
+    <div class="QRCodeInfoContainer">
+        <a class="QRCodeInfo" href="https://covid-19.ontario.ca/QRcode">More info about venue check-in & how to scan a QR code</a>
+    </div>
+
+
+</section>
+    <script defer src="JS/index.js"></script>
+</body>
+</html>
+

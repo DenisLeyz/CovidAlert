@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="CSS/style.css">
-    <script defer src="JS/index.js"></script>
+    
+    
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
     <section class="header">
         <div class="header-grid-container">
-            <button id="settings" data-modal-target="#modal2">
+            <a id="settings" href="settingsON.html">
                 <div class="settingsContainer">
                     <img id="settingsIcon" src="images/cog-solid@3x.png" alt="">
                 </div>
-            </button>
+            </a>
             <img id="headerLogo" src="images/CovidHeaderLogo@3x.png" alt="">
             <button id="language" data-modal-target="#modal1">
                 <div class="languageContainer">
@@ -57,6 +57,7 @@
             </button>
         </div>
     </div>
+    
 
 <!-- modals end here -->
 
@@ -76,13 +77,13 @@
 
     </div>
     <div class="loadingButtonGroup mainMenu">
-        <a class="mainButton" href="QRCodeScan.html">
+        <a class="mainButton" href="QRCodePage1.html">
             <div class="buttonContainer">
                 <img class="mainButtonImage" src="images/QR code.png" alt="">
                 <h1 class="buttonText">QR Code Check in</h1>
             </div>
         </a>
-        <a class="mainButton" href="oneTimeKey.html">
+        <a class="mainButton" href="OneTimeKeyPage.html">
             <div class="buttonContainer">
                 <img class="mainButtonImage" src="images/KeyActual.png" alt="">
                 <h1 class="buttonText">Enter your Covid testing code</h1>
@@ -98,6 +99,6 @@
     </div>
 
 </section>
-    
+    <script defer src="JS/index.js"></script>
 </body>
 </html>

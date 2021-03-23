@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="header utility">
+        <div class="header-grid-container">
+            <a class="close-button" href="main.html" >Back</a>
+            <img id="headerLogo" src="../images/CovidHeaderLogo@3x.png" alt="">
+        </div>
+    </div>
+
+
+<!-- modals -->
+
+
+
+
+    <div class="modal4" id="modal4">
+        <div class="modalHeader">
+            <h1 class="alertHeader">Turning off COVID Alert</h1>
+        </div>
+        <div class="modalBody">
+            <p class="alertBody">The app will not be able to record and inform you of possible exposures if you turn it off. Make sure to wear PPE (personal protective equipment), maintain social distancing, and stay safe. </p>
+        </div>
+        <div class="alertButtonContainer">
+            <button class="alertButton left" data-close-button class="close-button" >Cancel</button>
+            <a class="alertButton right" href="OFF/settingsOFF.html"> 
+                <div class="alertButton">
+                    <h1 class="alertButton yes" >Continue</h1>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- <div class="modal4" id="modal4">
+        <div class="modalHeader">
+            <h1 class="alertHeader">Use “COVID Alert” for <br> Exposure Notification?</h1>
+        </div>
+        <div class="modalBody">
+            <p class="alertBody">Only one app at a time can notify you of potential exposure. Other apps’ ability to send exposure notifications will be turned off. The date, duration, and signal strength associated with possible exposures will be shared with “COVID Alert”</p>
+        </div>
+        <div class="alertButtonContainer">
+            <a class="alertButton left" href="onboardingQR.html"> 
+                <div class="alertButton">
+                    <h1 class="alertButton">Don't Enable</h1>
+                </div>
+            </a>
+            <a class="alertButton right" href="onboardingQR.html"> 
+                <div class="alertButton">
+                    <h1 class="alertButton">Enable</h1>
+                </div>
+            </a>
+        </div>
+    </div> -->
+    
+    
+    
+
+<!-- modals end here -->
+
+<section class="SettingsMenu">
+    <div id="overlay"></div>
+    <div class="SettingsStatus">
+        <div class="SettingsCircle">
+        </div>
+        <h1 id="exposureText">Your app is active</h1>
+        <p id="SettingsStatusBody">If you have a Covid testing key, you can enter it down here.</p>
+    </div>
+    <div class="SettingsH">
+        <h1 id="SettingsH1">Settings</h1>
+    </div>
+    <div class="SettingsButtonGroup">
+        <a class="SettingsButton" href="OneTimeKeySettingsON.html">
+            <div class="SettingsButtonContainer important">
+                <h1 class="SettingsButtonText">Enter your Covid testing code</h1>
+                <div class="SettingsButtonIconContainer"><img class="SettingsButtonIcon" src="images/􀆊@3x.png" alt=""></div>
+            </div>
+        </a>
+        <a class="SettingsButton" href="">
+            <div class="SettingsButtonContainer">
+                <h1 class="SettingsButtonText">What to do if you're exposed</h1>
+                <div class="SettingsButtonIconContainer"><img class="SettingsButtonIconAlt" src="images/external link@3x.png" alt=""></div>
+            </div>
+        </a>
+        <a class="SettingsButton">
+            <div class="SettingsButtonContainer">
+                <h1 class="SettingsButtonText">Help</h1>
+                <div class="SettingsButtonIconContainer"><img class="SettingsButtonIconAlt" src="images/external link@3x.png" alt=""></div>
+            </div>
+        </a>
+        <a class="SettingsButton">
+            <div class="SettingsButtonContainer disabled">
+                <h1 class="SettingsButtonText">Change Province or Territory</h1>
+                <div class="SettingsButtonIconContainer"></div>
+            </div>
+        </a>
+
+
+        <!-- turncovid on -->
+
+        
+        <div class="SettingsButtonContainer important">
+            <h1 class="SettingsButtonText"> The COVID Alert app is <b>ON</b></h1>
+            <button id="CovidSettingsButton" data-modal-target="#modal4">
+                <img id="ToggleImage" src="images/Switch - On@2x.png" alt="">
+                
+            </button>
+
+
+            <!-- self-madeslider -->
+
+            <!-- <button class="CovidSettingsButton" data-modal-target="modal1" >
+                <div class="CovidSettingsButtonSlider"></div>
+            </button> -->
+
+
+
+
+
+    </div>
+<div class="SettingsH">
+    <h1 id="SettingsH2">About Covid Alert</h1>
+</div>
+    <div class="SettingsButtonGroup">
+        <a class="SettingsButton" href="">
+            <div class="SettingsButtonContainer disabled">
+                <h1 class="SettingsButtonText">How contact tracing works</h1>
+                <div class="SettingsButtonIconContainer"></div>
+            </div>
+        </a>
+        <a class="SettingsButton" href="">
+            <div class="SettingsButtonContainer LastButton">
+                <h1 class="SettingsButtonText">Privacy</h1>
+                <div class="SettingsButtonIconContainer"><img class="SettingsButtonIconAlt" src="images/external link@3x.png" alt=""></div>
+            </div>
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+
+
+
+    <script defer src="JS/index.js"></script>
+</body>
+</html>
