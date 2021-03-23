@@ -8,11 +8,20 @@ button {
     outline: none;
 }
 
-.ExtraBottomMargin {
-    margin-bottom: 120px;
+section {
+    min-height: fit-content;
+    margin: 0 auto;
 }
 
-html {height: 100%;}
+body.open {overflow: hidden;
+
+}
+
+.ExtraBottomMargin {
+    margin-bottom: 100px !important;
+}
+
+html {min-height: 100%;}
 section.onboardingFooter {display: flex;
     flex-direction: column;
     justify-content: center;}
@@ -26,6 +35,15 @@ a {
 height: 142px;
 width: 102px;}
 
+#FirstScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 250px;
+    width: 100%;
+    margin: auto;
+}
+
 #loadingScreen {
     display: flex;
     flex-direction: column;
@@ -35,12 +53,15 @@ width: 102px;}
     margin: auto;
 }
 
+
+
 .loadingButtonGroup {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 200px;
+    
     align-items: center;
+    margin-bottom: 40px;
 }
 
 h1.button {
@@ -126,13 +147,14 @@ font-family: "Open Sans", sans-serif;}
     padding: 0 20px;
     max-width: 540px;
     margin: 0 auto;
+    min-height: 100%;
 }
 
 .onboarding {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
-    width: 100%;
+    margin:30px 0 20px;
+    min-height: 400px;
     align-items: center;
     text-align: left;
 }
@@ -140,7 +162,7 @@ font-family: "Open Sans", sans-serif;}
 .onboardingHeader {
     text-align: left;
     width: 100%;
-    margin: 40px 0 20px;
+    margin: 30px 0 20px;
     font-size: 20px;
 
 }
@@ -149,6 +171,8 @@ font-family: "Open Sans", sans-serif;}
 .onboardingBody {
     font-size: 18px;
     text-align: left;
+    height: 100%;
+    padding-bottom: 50px;
 }
 
 #onboarding1Img { 
@@ -159,8 +183,15 @@ font-family: "Open Sans", sans-serif;}
 .circle {background-color: rgba(188, 239, 172, 1);
 	border-radius: 50%;
 	animation: pulse-red 2s infinite;
-	height: 128px;
-	width: 128px;
+
+height: 128px;
+width: 128px;
+
+	/* max-height: 128px;
+    height: 100%;
+	max-width: 128px;
+    width: 100%; */
+
 display: flex;
 justify-content: center;
 align-items: center;}
@@ -185,14 +216,24 @@ align-items: center;}
 #exposureText {font-size: 18px;
 text-align: center;}
 
+#exposureTextOff {font-size: 18px;
+    text-align: center;
+color: red;}
+
+.disabledImage {
+
+    filter: grayscale(50%) opacity(10%);
+    
+}
+
 
 .onboardingFooterContainer {
     display:flex;
 flex-direction: row;
 justify-content: space-between;
 padding: 0 20px 20px;
-position: relative;
-margin-top: 140px;
+position: absolute;
+margin-top: auto;
 left: 0;
 bottom: 0;
 width: 90%;
@@ -203,8 +244,6 @@ border-left: none;
 border-right: none;
 padding-top: 20px;}
 
-.onboardingGrid {height: 50vh;}
-.onboarding {height: 50vh;}
 
 
 .footer {
@@ -307,7 +346,7 @@ border-radius: 50%;
 }
 
 #overlay {
-    position: absolute;
+    position: fixed;
     opacity: 0;
     top: 0;
     left: 0;
@@ -315,6 +354,7 @@ border-radius: 50%;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     pointer-events: none;
+    min-height: 600px;
     height: 100%;
 }
 
@@ -359,7 +399,7 @@ border: none;}
 .utilityHeader {
     font-size: 22px;
     font-weight: 500;
-    margin: 16px 8px 46px
+    margin: 16px 8px 32px
 }
 
 .utilityBody
@@ -455,10 +495,11 @@ pointer-events: all;}
 .onboardingGrid {
     display: grid;
     grid-template-columns: 0.5fr 1.5fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 100px 200px;
     grid-template-areas:"OnboardingI OnboardingI"
     "OnboardingIc OnboardingB";
-    margin-top: 50px;
+    margin-top: 100px;
+    min-height: 400px;
 }
 
 .OnboardingI {grid-area: OnboardingI;
@@ -495,15 +536,17 @@ margin-top: 20px;}
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 88.5vh;
     background-color: #EFEFEF;
+    max-height: 100vh;
+    min-height: 721px;
+    height: fit-content;
 }
 
 .currentLocationContainer {
     background-color: #BCEFAC;
     width: 250px;
     height: 70px;
-    margin: 25px auto 60px;
+    margin: 25px auto 40px;
     text-align: center;
     border-radius: 18px;
     display: flex;
@@ -535,7 +578,7 @@ margin-top: 20px;}
 }
 
 .mainMenu {
-    margin-top: 60px;
+    margin-top: 30px;
 
 }
 
@@ -629,6 +672,7 @@ color: white;
 font-size: 18px;
 font-weight: 700;
 border-radius: 28px;
+margin-bottom: 40px;
 }
 
 #QRSave {
@@ -650,11 +694,8 @@ border-radius: 28px;
 /* QR code page 1 */
 
 .QRSection {
-    padding: 0 20px;
     text-align: center;
-    margin: 40px auto 0;
-    max-width: 540px;
-    height: 84vh;
+    margin: 40px auto 40px !important;
     }
 
 
@@ -662,7 +703,7 @@ border-radius: 28px;
     height: 50px;
     font-size: 18px;
     width: auto;
-    margin-top: 60px;
+    margin-top: 40px;;
 }
 
 .QRMake {
@@ -681,7 +722,10 @@ border-radius: 28px;
     background-color: white;
     box-shadow: 0 0 6px #C4C4C4;
     border-radius: 22px;
-    padding: 16px 8px;
+    padding: 16px 20px;
+    width: 90%;
+    text-align: center;
+    margin: 40px auto 40px !important;
 }
 
 #QRC2Header {
@@ -714,10 +758,12 @@ font-size: 18;
 font-weight: 600;}
 
 .QRCodeInfoContainer {
-    margin: 40px auto 0;
+    margin: 20px auto 20px;
     text-decoration: underline;
     width: 80%;
+    text-align: center;
 }
+
 
 .QRModal {
     display: flex;
@@ -725,6 +771,13 @@ font-weight: 600;}
     transform: scale(0);
     animation: 200ms;
     
+}
+
+#flex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 20px;
 }
 
 .QRModal.active {
@@ -754,6 +807,9 @@ font-weight: 600;}
     font-weight: 300;
 }
 
+#CreateYourQR {
+    align-self: center;
+}
 
 .CreateYourQRButton {
     width: 100%;
@@ -975,8 +1031,8 @@ width: 75%;
 }
 
 .disabled {
-    color: #CCCCCC;
-    border-color: #CCCCCC;
+    color: #CCCCCC !important;
+    border-color: #CCCCCC !important;
 }
 
 .important {
@@ -1135,13 +1191,21 @@ pointer-events: all;}
 
 }
 
-.SettingsCircleOff {
-        width: 40px;
-        height: 40px;
+
+
+.BiggerOffCircle {
+    width: 128px;
+    height: 128px;
         border-radius: 50%;
         background-color: #CCCCCC;
         margin: 20px auto;
-    }
+        display: flex;
+        
+        align-items: center;
+        
+
+}
+
 
 
     /* Restrictions page */
@@ -1161,7 +1225,7 @@ pointer-events: all;}
         display: flex;
         flex-direction: column;
         text-align: center;
-        min-width: 75px;
+        max-width: 75px;
         height: 60px;
         display: flex;
         justify-content: center;
@@ -1194,6 +1258,7 @@ pointer-events: all;}
 
     .RestrictGroupGrid {
         max-width: 540px;
+        width: 100%;
         margin:0 auto;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -1207,7 +1272,9 @@ pointer-events: all;}
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0 10px;
+        justify-content: center;
+        margin:0 auto;
+        max-width: 120px;
     }
 
     .RestrictGroupImg {
@@ -1219,6 +1286,7 @@ pointer-events: all;}
         text-align: center;
         font-size: 14px;
         margin-bottom: 20px;
+        max-width: 94px;
     }
 
 
@@ -1290,4 +1358,9 @@ li.RestrictionList {
     border-bottom-right-radius: 14px;
     border-top: 1px solid #707070;
 
+}
+
+
+.LongOverlay {
+    height: 136vh !important;
 }

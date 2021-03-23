@@ -25,8 +25,10 @@
             </button>
         </div>
     </section>
-    <section class="container">
-        <div class="onboarding">
+
+
+    <section class="">
+        <div class="onboarding container">
             <div class="circle">
                 <h1 id="exposureText">Your app is active</h1>
 
@@ -41,52 +43,7 @@ Covid Alert helps us break the cycle of infection.
 Make sure your app is turned on and working by checking for this message on your home screen. That way, we can take care of ourselves and protect our communities.
             </p>
         </div>
-    </section> 
-    <div class="modal1" id="modal1">
-        <div class="header utility">
-            <div class="header-grid-container">
-                <button data-close-button class="close-button" >Back</button>
-                <img id="headerLogo" src="../images/CovidHeaderLogo@3x.png" alt="">
-            </div>
-        </div>
-        <div class="utilityHeaderContainer">
-            <h1 class="utilityHeader ">Languages</h1>
-        </div>
-        <div class="utilityBody">
-            <button class="languageButton">
-                <p class="French">English</p>
-                <img class="French" src="../images/checkmark.png" alt="">
-
-            </button>
-            <button class="languageButton">
-                <p class="French">Francais</p>
-                <img class="French" src="" alt="">
-
-            </button>
-        </div>
-    </div>
-    <div class="modal" id="modal">
-        <div class="modalHeader">
-            <h1 class="alertHeader">Use “COVID Alert” for <br> Exposure Notification?</h1>
-        </div>
-        <div class="modalBody">
-            <p class="alertBody">Only one app at a time can notify you of potential exposure. Other apps’ ability to send exposure notifications will be turned off. The date, duration, and signal strength associated with possible exposures will be shared with “COVID Alert”</p>
-        </div>
-        <div class="alertButtonContainer">
-            <a class="alertButton left" href="onboardingQR.html"> 
-                <div class="alertButton">
-                    <h1 class="alertButton">Don't Enable</h1>
-                </div>
-            </a>
-            <a class="alertButton right" href="onboardingQR.html"> 
-                <div class="alertButton">
-                    <h1 class="alertButton">Enable</h1>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="" id="overlay"></div>
-    <div class="onboardingFooterContainer">
+        <div class="onboardingFooterContainer">
         
             <a id="Back" href="../index.html">Back</a>
 
@@ -100,6 +57,64 @@ Make sure your app is turned on and working by checking for this message on your
         
         
     </div>
+    <div class="" id="overlay"></div>
+    </section> 
+
+
+    <!-- Modals start here -->
+
+    <div class="modal1" id="modal1">
+        <div class="header utility">
+            <div class="header-grid-container">
+                <button data-close-button class="close-button" >Back</button>
+                <img id="headerLogo" src="../images/CovidHeaderLogo@3x.png" alt="">
+            </div>
+        </div>
+        <div class="utilityHeaderContainer">
+            <h1 class="utilityHeader ">Languages</h1>
+        </div>
+        <div class="utilityBody">
+            <button data-close-button class="languageButton">
+                <p class="French">English</p>
+                <img class="French" src="../images/checkmark.png" alt="">
+
+            </button>
+            <button class="languageButton disabled">
+                <p class="French">Francais</p>
+                <img class="French" src="" alt="">
+
+            </button>
+        </div>
+    </div>
+
+
+
+
+    <div class="modal" id="modal">
+        <div class="modalHeader">
+            <h1 class="alertHeader">Use “COVID Alert” for <br> Exposure Notification?</h1>
+        </div>
+        <div class="modalBody">
+            <p class="alertBody">Only one app at a time can notify you of potential exposure. Other apps’ ability to send exposure notifications will be turned off. The date, duration, and signal strength associated with possible exposures will be shared with “COVID Alert”</p>
+        </div>
+        <div class="alertButtonContainer">
+            <a class="alertButton left" > 
+                <div class="alertButton">
+                    <h1 class="alertButton disabled">Don't Enable</h1>
+                </div>
+            </a>
+            <a class="alertButton right" href="onboardingQR.html"> 
+                <div class="alertButton">
+                    <h1 class="alertButton">Enable</h1>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+
+<!-- modals end here -->
+
+    
     <script defer src="../JS/index.js"></script>
 </body>
 </html>

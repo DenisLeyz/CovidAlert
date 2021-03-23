@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,16 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="../CSS/style.css">
+    
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
     <section class="header">
         <div class="header-grid-container">
+            <a id="settings" href="settingsOFF.html">
+                <div class="settingsContainer">
+                    <img id="settingsIcon" src="../images/cog-solid@3x.png" alt="">
+                </div>
+            </a>
             <img id="headerLogo" src="../images/CovidHeaderLogo@3x.png" alt="">
             <button id="language" data-modal-target="#modal1">
                 <div class="languageContainer">
@@ -25,26 +31,10 @@
             </button>
         </div>
     </section>
-    <section class="container">
-        <div class="onboardingGrid">
-            <div class="OnboardingI">
-                <img src="../images/onobardingKey.png" alt="">
-            </div>
-            <div class="OnboardingB">
-                <h1 class="onboardingHeader">
-                    One Time Key</h1>
-                <p class="onboardingBody"> 
-                    Once you have been diagnosed with covid. Enter your one time key to Notify people when you’ve been exposed.
-</p>
-            </div>
-            <div class="OnboardingIc">
-                <img src="../images/KeyActual.png" alt="">
-            </div>
 
-            
-            
-        </div>
-    </section> 
+
+<!-- modals -->
+
     <div class="modal1" id="modal1">
         <div class="header utility">
             <div class="header-grid-container">
@@ -69,20 +59,47 @@
         </div>
     </div>
     
-    <div class="onboardingFooterContainer">
-        
-            <a id="Back" href="onboardingRestrict.html">Back</a>
 
-            <div class="pagination">
-                <div class="paginationPage" ></div>
-                <div class="paginationPage" ></div>
-                <div class="paginationPage"></div>
-                <div class="paginationPage"id="active"></div>
-            </div>
-            <a id="Next" href="../main.html" >Next</a>
-        
-        
+<!-- modals end here -->
+
+
+<section class="container mainPageContainer">
+    <div class="currentLocationContainer">
+        <img id="locationIcon" src="../images/location@3x.png" alt="">
+        <div class="locationBodyContainer">
+            <p class="locationPlace">Brampton, ON</p>
+            <h1 class="locationTier">Tier 1</h1>
+        </div>
+
     </div>
+    <div class=" BiggerOffCircle">
+        <h1 id="exposureTextOff">Your app is inactive <b>!</b></h1>
+
+
+    </div>
+    <div class="loadingButtonGroup mainMenu">
+        <a class="mainButton" href="QROFF1.html">
+            <div class="buttonContainer">
+                <img class="mainButtonImage" src="../images/QR code.png" alt="">
+                <h1 class="buttonText">QR Code Check in</h1>
+            </div>
+        </a>
+        <a class="mainButton disabled" href="OneTimeKeyPage.html">
+            <div class="buttonContainer">
+                <img class="mainButtonImage disabledImage" src="../images/KeyActual.png" alt="">
+                <h1 class="buttonText">Enter your Covid testing code</h1>
+            </div>
+        </a>
+        <a class="mainButton" href="RestrictionsOff.html">
+            <div class="buttonContainer">
+                <img class="mainButtonImage" src="../images/Key.png" alt="">
+                <h1 class="buttonText">Check restriction information</h1>
+            </div>
+        </a>
+
+    </div>
+
+</section>
     <script defer src="../JS/index.js"></script>
 </body>
 </html>
