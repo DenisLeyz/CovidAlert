@@ -613,7 +613,7 @@ width: 102px;}
 #onboardingSection {
     display: flex;
     flex-direction: column;
-    min-height: 90vh !important;
+    min-height: 87vh !important;
     justify-content: space-between;
 }
 
