@@ -1,12 +1,24 @@
+/* Welcome to my stylesheet! */
+
+/* Disclaimer: 
+I am not a professional, it will get messy.
+Proceed at your own risk */
+
+
+/* I broke the whole style sheets into "Global" classes and ids, "Modals/overlays", and those found on specific pages. Quite a few classes a repeated in multiple pages, but not enough to be considered "global", so they are left on the first page they are encoutered. */
+
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+/* Global and supporting classes & tags*/
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
 * {
     margin: 0;
     padding: 0;
     font-family: "Open Sans", sans-serif;
 }
 
-button {
-    outline: none;
-}
+html {min-height: 100%;}
 
 body {
     min-width: 100%;
@@ -17,60 +29,35 @@ section {
     margin: 0 auto;
 }
 
-body.open {overflow: hidden;
-
+button {
+    outline: none;
 }
 
-.ExtraBottomMargin {
-    margin-bottom: 100px !important;
-}
 
-html {min-height: 100%;}
+
 section.onboardingFooter {display: flex;
     flex-direction: column;
     justify-content: center;}
 
 a {
     color: black;
-}
+text-decoration: none;
+cursor: pointer;}
 
-.loadingButtonGroupItem {
-    margin: 20px 0;
-}
+li {margin: 20px 0;}
 
-#loadingLogo {margin: 0 auto;
-height: 142px;
-width: 102px;}
-
-#FirstScreen {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 250px;
-    width: 100%;
-    margin: auto;
-}
-
-#loadingScreen {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 500px;
-    width: 100%;
-    margin: auto;
+input {
+    height: 50px;
+    margin:10px 0;
 }
 
 
+label {text-align: left;
+margin-top: 16px;
+font-size: 18;
+font-weight: 600;}
 
 
-.loadingButtonGroup {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    
-    align-items: center;
-    margin-bottom: 40px;
-}
 
 h1.button {
     text-align: center;
@@ -86,8 +73,14 @@ h1.button {
     border-radius: 40px;
 }
 
-a {text-decoration: none;
-cursor: pointer;}
+.header-grid-container {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-areas: " . headerLogo language";
+    margin: 50px auto 0;
+    max-width: 540px;
+}
+
 
 .header {
     width: 100%;
@@ -97,25 +90,45 @@ cursor: pointer;}
 }
 
 
-
-
-/* OnboardingTrace */
-
-.header-grid-container {
-    display: grid;
-    grid-template-columns: 0.5fr 1fr 0.5fr;
-    grid-template-areas: " . headerLogo language";
-    margin: 50px auto 0;
-    max-width: 540px;
+.languageContainer {
+    display: flex;
+    justify-content:space-between;
+    padding: 5% 10%;
+    text-align: center;
+    width: 65px;
+    align-items: center;
+    border: 1px solid #CCCCCC;
+    border-radius: 17px;
 }
 
-#headerLogo { 
-    width: 85px;
-height: 23px;
-margin:auto;
-grid-area: headerLogo;
-display: flex;
-flex-direction: column;}
+.container {
+    padding: 0 20px;
+    max-width: 540px;
+    margin: 0 auto;
+    min-height: 100%;
+}
+
+.disabled {
+    color: #CCCCCC !important;
+    border-color: #CCCCCC !important;
+}
+
+
+.ExtraBottomMargin {
+    margin-bottom: 100px !important;
+}
+
+.disabledImage {
+
+    filter: grayscale(50%) opacity(10%);
+    
+}
+
+img#flagOfCanada {
+    width: 17px;
+    height: 9px;
+    margin: 0 4px;
+}
 
 button#language {margin-left: auto;
 grid-area: language;
@@ -130,175 +143,41 @@ button{
     align-items: center;
 }
 
-.languageContainer {
-    display: flex;
-    justify-content:space-between;
-    padding: 5% 10%;
-    text-align: center;
-    width: 65px;
-    align-items: center;
-    border: 1px solid #CCCCCC;
-    border-radius: 17px;
-}
-
-img#flagOfCanada {
-    width: 17px;
-    height: 9px;
-    margin: 0 4px;
-}
-
 #languageButton {
     color: black;
 font-size: 12px;
 font-family: "Open Sans", sans-serif;}
 
-.container {
-    padding: 0 20px;
-    max-width: 540px;
-    margin: 0 auto;
-    min-height: 100%;
-}
-
-.onboarding {
-    display: flex;
-    flex-direction: column;
-    margin-top:30px;
-    margin-bottom: 20px;
-    min-height: 400px;
-    align-items: center;
-    text-align: left;
-}
-
-.CircleContainer {width: 128px;
-height: 128px;}
-
-.onboardingHeader {
-    text-align: left;
-    width: 100%;
-    margin: 30px 0 20px;
-    font-size: 20px;
-
-}
-
-
-.onboardingBody {
-    font-size: 18px;
-    text-align: left;
-    height: 100%;
-    padding-bottom: 50px;
-}
-
-#onboarding1Img { 
-    width: 128px;
-    height: auto;
-}
-
-.circle {background-color: rgba(188, 239, 172, 1);
-	border-radius: 50%;
-	animation: pulse-red 2s infinite;
-
-height: 128px;
-width: 128px;
-
-	/* max-height: 128px;
-    height: 100%;
-	max-width: 128px;
-    width: 100%; */
-
+#headerLogo { 
+    width: 85px;
+height: 23px;
+margin:auto;
+grid-area: headerLogo;
 display: flex;
-justify-content: center;
-align-items: center;}
-
-    @keyframes pulse-red {
-        0% {
-            transform: scale(0.9);
-            box-shadow: 0 0 0 0 rgba(188, 239, 172, 0.7);
-        }
-        
-        70% {
-            transform: scale(1);
-            box-shadow: 0 0 0 10px rgba(188, 239, 172, 0);
-        }
-        
-        100% {
-            transform: scale(0.9);
-            box-shadow: 0 0 0 0 rgba(188, 239, 172, 0);
-        }
-    }
-
-#exposureText {font-size: 18px;
-text-align: center;}
-
-#exposureTextOff {font-size: 18px;
-    text-align: center;
-color: red;}
-
-.disabledImage {
-
-    filter: grayscale(50%) opacity(10%);
-    
-}
+flex-direction: column;}
 
 
-.onboardingFooterContainer {
-    display:flex;
-flex-direction: row;
-justify-content: space-between;
-padding: 0 20px 20px;
-margin: auto;
-margin-bottom: 0;
+/* body.open {overflow: hidden;
 
-/* position: absolute;
-left: 0;
-bottom: 0; */
-width: 90%;
-max-width: 540px;
-border: 1px solid #CCCCCC;
-border-bottom: none;
-border-left: none;
-border-right: none;
-padding-top: 20px;}
+} */
 
-#onboardingSection {
-    display: flex;
-    flex-direction: column;
-    min-height: 90vh !important;
-    justify-content: space-between;
-}
+
+/*     *//*     *//*     *//*     *//*     */
+/* Global and supporting classes & tags ENDS*/
+/*     *//*     *//*     *//*     *//*     */
 
 
 
 
-.footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    width: 100%;
-    padding: 0 10px;
 
-}
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+/* Modals and overlays */
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
 
-.pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.paginationPage {
-    background-color: #6F7070;
-    width: 12px;
-    height: 12px;
-margin: 0 16px;
-border-radius: 50%;
-}
-
-#active {
-    background-color: #BE0404;
-    width: 18px;
-    height: 18px;
-}
-
+/* modal number1 */
 .modal {
     position: absolute;
     top: 50%;
@@ -317,6 +196,9 @@ border-radius: 50%;
 .modal.active {
     transform: translate(-50%, -50%) scale(1);
 }
+
+
+
 
 .alertHeader {
     font-size: 17px;
@@ -381,23 +263,12 @@ border-radius: 50%;
     height: 100%;
 }
 
+
 #overlay.active {
     opacity: 1;
 pointer-events: all;}
 
-.onboardingButton {background-color: inherit;
-border:none;
-font-size: 16px;}
-
-#Back {margin-right: auto;}
-#Next {margin-left: auto;
-background-color: inherit;
-color: black;
-font-size: 16px;
-border: none;}
-
-
-
+/* modal number2 */
 .modal1 {
     position: absolute;
     top: 0;
@@ -455,341 +326,9 @@ border: none;}
     transform: translate(-50%, -50%) scale(1);
 }
 
-.alertHeader {
-    font-size: 17px;
-    font-weight: 600;
-    text-align: center;
-    padding: 10px 20px 5px;
-}
 
-.alertBody {
-    padding: 0 20px 5px;
-    text-align: center;
-    font-size: 13px;
-}
 
-.alertButton {
-    font-size: 17px;
-    font-weight: 400;
-    color: #007AFF;
-
-}
-
-.alertButtonContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "left right";
-    text-align: center;
-    
-    
-
-}
-
-.left {
-    grid-area: left;
-    padding: 12px 0;
-    border:1px solid #707070;
-    border-bottom-left-radius: 14px;
-}
-
-.right {
-    grid-area: right;
-    padding: 12px 0;
-    border:1px solid #707070;
-    border-bottom-right-radius: 14px;
-    border-left:none;
-
-}
-
-#overlay {
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    pointer-events: none;
-}
-
-#overlay.active {
-    opacity: 1;
-pointer-events: all;} 
-
-
-/* Onboarding 2 */
-
-.onboardingGrid {
-    display: grid;
-    grid-template-columns: 0.5fr 1.5fr;
-    grid-template-rows: 100px 200px;
-    grid-template-areas:"OnboardingI OnboardingI"
-    "OnboardingIc OnboardingB";
-    margin-top: 100px;
-}
-
-.OnboardingI {grid-area: OnboardingI;
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 0 auto;
-width: 80%;
-object-fit: contain;}
-
-.OnboardingB {grid-area: OnboardingB;
-    margin-top: 20px;}
-
-.OnboardingIc {grid-area: OnboardingIc;
-display: flex;
-flex-direction: column;
-justify-content: center;
-margin-top: 20px;}
-
-
-
-/* main page */
-
-
-
-#settingsIcon {
-    width: 22px;
-    height: 22px;
-    display: flex;
-    margin:auto
-}
-
-.mainPageContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #EFEFEF;
-    max-height: 100vh;
-    min-height: 721px;
-    height: fit-content;
-}
-
-.currentLocationContainer {
-    background-color: #BCEFAC;
-    width: 250px;
-    height: 70px;
-    margin: 25px auto 40px;
-    text-align: center;
-    border-radius: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding:10px 20px
-}
-
-#locationIcon {
-    width: 17.5px;
-    height: 23.5px;
-    padding:0 20px
-}
-
-.locationBodyContainer {
-    padding:0 20px
-}
-
-.locationPlace {
-    font-size: 14px;
-    font-weight: 800;
-    padding: 10px 0 5px;
-}
-
-.locationTier {
-    font-size: 22px;
-    font-weight: 800;
-    padding: 5px 0 10px;
-}
-
-.mainMenu {
-    margin-top: 30px;
-
-}
-
-.buttonContainer {
-    display: grid;
-    grid-template-columns: 25% 75%;
-    grid-template-areas: "mainButtonImage buttonText";
-}
-
-h1.button {
-    
-    flex-direction: row;
-    height: 40px;
-    width: 285px;
-    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.16);
-    padding-top: 15px;
-    border: 1px solid #E3E2E2;
-    font-size: 18px;
-    color: black;
-    text-decoration: none;
-    border-radius: 40px;
-}
-
-.mainButton {
-    width: 100%;
-    max-width: 360px;
-    border: 1px solid #E3E2E2;
-    border-radius: 40px;
-    margin: 10px 0;
-    background-color: white;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-}
-
-.mainMenu {width: 80%;}
-
-.mainButtonImage {
-    grid-area: mainButtonImage;
-    margin: auto;
-}
-
-.buttonText {
-    font-size: 18px;
-    font-weight: 600;
-    width: 175px;
-    grid-area: buttonText;
-    margin: auto;
-    text-align: center;
-}
-
-
-/* One time key direct page */
-
-.oneTimeKeySection {
-padding: 0 20px;
-text-align: center;
-margin: 40px auto 0;
-max-width: 540px;
-}
-
-.keyList {
-    padding: 5px 20px 40px
-}
-
-li {margin: 20px 0;}
-
-.keySubmitForm{
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    width:80%;
-    margin: 0 auto;
-}
-
-#keyHeader {text-align: center;}
-
-input {
-    height: 50px;
-    margin:10px 0;
-}
-
-#keyInput {
-    background-color: #EFEFEF;
-    border: 1px solid #E3E2E2;
-    border-radius: 5px;
-    padding: 0 10px;
-}
-
-#keySubmit {
-background-color: #BE0404;
-color: white;
-font-size: 18px;
-font-weight: 700;
-border-radius: 28px;
-margin-bottom: 40px;
-}
-
-#QRSave {
-    background-color: #BE0404;
-    color: white;
-    font-size: 18px;
-    font-weight: 700;
-    border-radius: 28px;
-    min-width: 260px;
-    max-width: 540px;
-    }
-
-.close-button {
-    text-align: left;
-    padding-left: 10px;
-    font-size: 16px;
-}
-
-/* QR code page 1 */
-
-.QRSection {
-    text-align: center;
-    margin: 40px auto 40px !important;
-    }
-
-
-.QRSubmit {
-    height: 50px;
-    font-size: 18px;
-    width: auto;
-    margin-top: 40px;;
-}
-
-.QRMake {
-    margin-top: 40px;
-}
-
-#buttonText {
-    font-size: 18px;
-    padding: 10px 0;
-}
-
-
-/* QRCode page 2 */
-
-.QRformContainer {
-    background-color: white;
-    box-shadow: 0 0 6px #C4C4C4;
-    border-radius: 22px;
-    padding: 16px 20px;
-    width: 90%;
-    text-align: center;
-    margin: 40px auto 40px !important;
-}
-
-#QRC2Header {
-    text-align: center;
-    margin: 16px 8px;
-}
-
-.QRCodeForm {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.QRInput {
-    margin: 0;
-    border-radius: 5px;
-    border: 1px solid #E3E2E2;
-    padding: 0 10px;
-}
-
-#QRC2Body {
-    font-size: 12px;
-text-align: center;
-width: 80%;
-margin: 0 auto;}
-
-label {text-align: left;
-margin-top: 16px;
-font-size: 18;
-font-weight: 600;}
-
-.QRCodeInfoContainer {
-    margin: 20px auto 20px;
-    text-decoration: underline;
-    width: 80%;
-    text-align: center;
-}
-
+/* modal number3 QR code page*/
 
 .QRModal {
     display: flex;
@@ -847,6 +386,9 @@ font-weight: 600;}
 
 #QCSubmit {
     background-color: white;}
+
+
+/* modal number4, QR code page*/
 
 .QRModal2{
     display: flex;
@@ -928,73 +470,612 @@ font-weight: 600;}
     pointer-events: all;}
 
 
-    .toggle-container {
-        position: relative;
-        display: inline-block;
-        width: 80px;
-        height: 40px;
-        pointer-events: none;
     
-    }
-    .toggle-container input {
-        opacity: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: all;
+    /* modal number5, settings page*/
+
+    .modal4 {
+    position: fixed;
+    top: 30%;
+    left: 14%;
+    transform: translate(-50%, -50%) scale(0); 
+    background-color: rgba(242, 242, 242,0.9);
+    border-radius: 14px;
+    z-index: 4;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    transition: 100ms ease-in-out;}
+
+.modal4.active {
+    transform: scale(1);
+}
+
+
+
+    /* modal number6, restrictions page*/
+
+.modalR1 {
+    position: fixed;
+    top: 10%;
+    left: 14%;
+    transform: translate(-50%, -50%) scale(0); 
+    background-color: rgba(242, 242, 242,0.9);
+    border-radius: 14px;
+    z-index: 2;
+    width: 270px ;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    transition: 100ms ease-in-out;
+}
+
+.modalR1.active {
+    transform: scale(1);
+}
+
+li.RestrictionList {
+    list-style-type: none;
+}
+
+
+.RestrictionOverlayClose {
+    font-size: 17px;
+    font-weight: 400;
+    color: #007AFF;
+    padding: 12px 0;
+    border:1px solid #707070;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    border-top: 1px solid #707070;
+
+}
+
+
+.LongOverlay {
+    height: 136vh !important;
+}
+/*     *//*     *//*     *//*     *//*     */
+/* Modals and overlays ENDS */
+/*     *//*     *//*     *//*     *//*     */
+
+
+
+
+
+
+
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+/* Loading Screen */
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+
+.loadingButtonGroupItem {
+    margin: 20px 0;
+}
+
+#loadingLogo {margin: 0 auto;
+height: 142px;
+width: 102px;}
+
+#FirstScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 450px;
+    width: 100%;
+    margin: auto;
+}
+
+/* #loadingScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    width: 100%;
+    margin: auto;
+} */
+
+
+
+
+.loadingButtonGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    align-items: center;
+    margin-bottom: 40px;
+}
+/*     *//*     *//*     *//*     *//*     */
+/* Loading Screen ENDS */
+/*     *//*     *//*     *//*     *//*     */
+
+
+
+
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+/* Onboarding-wide tags */
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+.onboarding {
+    display: flex;
+    flex-direction: column;
+    margin-top:30px;
+    margin-bottom: 20px;
+    min-height: 400px;
+    align-items: center;
+    text-align: left;
+}
+
+#onboardingSection {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh !important;
+    justify-content: space-between;
+}
+
+.onboardingHeader {
+    text-align: left;
+    width: 100%;
+    margin: 30px 0 20px;
+    font-size: 20px;
+
+}
+
+
+.onboardingBody {
+    font-size: 18px;
+    text-align: left;
+    height: 100%;
+    padding-bottom: 10px;
+}
+
+#onboarding1Img { 
+    width: 128px;
+    height: auto;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paginationPage {
+    background-color: #6F7070;
+    width: 12px;
+    height: 12px;
+margin: 0 16px;
+border-radius: 50%;
+}
+
+#active {
+    background-color: #BE0404;
+    width: 18px;
+    height: 18px;
+}
+
+
+.onboardingFooterContainer {
+    display:flex;
+flex-direction: row;
+justify-content: space-between;
+padding: 0 20px 20px;
+margin: auto;
+margin-bottom: 0;
+width: 90%;
+max-width: 540px;
+border: 1px solid #CCCCCC;
+border-bottom: none;
+border-left: none;
+border-right: none;
+padding-top: 20px;}
+
+
+#Back {margin-right: auto;}
+#Next {margin-left: auto;
+background-color: inherit;
+color: black;
+font-size: 16px;
+border: none;}
+/*     *//*     *//*     *//*     *//*     */
+/* Onboarding-wide tags  ENDS*/
+/*     *//*     *//*     *//*     *//*     */
+
+
+
+
+
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+/* OnboardingTrace */
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+.CircleContainer {width: 128px;
+height: 128px;}
+
+
+
+.circle {background-color: rgba(188, 239, 172, 1);
+	border-radius: 50%;
+	animation: pulse-red 2s infinite;
+
+height: 128px;
+width: 128px;
+
+	/* max-height: 128px;
+    height: 100%;
+	max-width: 128px;
+    width: 100%; */
+
+display: flex;
+justify-content: center;
+align-items: center;}
+
+    @keyframes pulse-red {
+        0% {
+            transform: scale(0.9);
+            box-shadow: 0 0 0 0 rgba(188, 239, 172, 0.7);
+        }
         
-    }
-    .slider {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        cursor: pointer;
-        background-color: #808080;
-        transition: 0.4s;
-        pointer-events: none;
-        border-radius: 25px;
-    }
-
-    .slider::before {
-        content: "";
-        position: absolute;
-        height: 24px;
-        width: 24px;
-        left: 8px;
-        bottom: 8px;
-        background-color: #fff;
-        transition: 0.2s;
-        pointer-events: none;
-        border-radius: 50%;
+        70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 10px rgba(188, 239, 172, 0);
+        }
         
+        100% {
+            transform: scale(0.9);
+            box-shadow: 0 0 0 0 rgba(188, 239, 172, 0);
+        }
     }
 
-    .slider::after {
-        position: absolute;
-        content: "off";
-        height: 24px;
-        width: 24px;
-        right: 10px;
-        bottom: 6px;
-        transition: 0.2s;
-        pointer-events: none;
-        color: #fff;
-        padding-left: 10px;
+#exposureText {font-size: 18px;
+text-align: center;}
+
+#exposureTextOff {font-size: 18px;
+    text-align: center;
+color: red;}
+/*     *//*     *//*     *//*     *//*     */
+/* OnboardingTrace ENDS*/
+/*     *//*     *//*     *//*     *//*     */
+
+
+
+
+
+
+/* Feel free to ignore this idea dump */
+
+
+/* 
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 0 10px;
+
+} */
+
+
+
+
+
+/* .onboardingButton {background-color: inherit;
+border:none;
+font-size: 16px;} */
+
+
+
+
+
+
+
+
+
+
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+/* Onboarding QR, Key, Restrict */
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+.onboardingGrid {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 100px 200px;
+    grid-template-areas:"OnboardingI OnboardingI"
+    "OnboardingIc OnboardingB";
+    margin-top: 100px;
+}
+
+.OnboardingI {grid-area: OnboardingI;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+width: 80%;
+object-fit: contain;}
+
+.OnboardingB {grid-area: OnboardingB;
+    margin-top: 20px;}
+
+.OnboardingIc {grid-area: OnboardingIc;
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin-top: 20px;}
+/*     *//*     *//*     *//*     *//*     */
+/* Onboarding QR, Key, Restrict ENDS*/
+/*     *//*     *//*     *//*     *//*     */
+
+
+
+
+
+
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+/* main page */
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+#settingsIcon {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    margin:auto
+}
+
+.mainPageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EFEFEF;
+    max-height: 100vh;
+    min-height: 721px;
+    height: fit-content;
+}
+
+.currentLocationContainer {
+    background-color: #BCEFAC;
+    width: 250px;
+    height: 70px;
+    margin: 25px auto 40px;
+    text-align: center;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px 20px
+}
+
+#locationIcon {
+    width: 17.5px;
+    height: 23.5px;
+    padding:0 20px
+}
+
+.locationBodyContainer {
+    padding:0 20px
+}
+
+.locationPlace {
+    font-size: 14px;
+    font-weight: 800;
+    padding: 10px 0 5px;
+}
+
+.locationTier {
+    font-size: 22px;
+    font-weight: 800;
+    padding: 5px 0 10px;
+}
+
+.mainMenu {
+    margin-top: 30px;
+
+}
+
+.buttonContainer {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-areas: "mainButtonImage buttonText";
+}
+
+
+
+.mainButton {
+    width: 100%;
+    max-width: 360px;
+    border: 1px solid #E3E2E2;
+    border-radius: 40px;
+    margin: 10px 0;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.mainMenu {width: 80%;}
+
+.mainButtonImage {
+    grid-area: mainButtonImage;
+    margin: auto;
+}
+
+.buttonText {
+    font-size: 18px;
+    font-weight: 600;
+    width: 175px;
+    grid-area: buttonText;
+    margin: auto;
+    text-align: center;
+}
+/*     *//*     *//*     *//*     *//*     */
+/* main page ENDS */
+/*     *//*     *//*     *//*     *//*     */
+
+
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+/* One time key page */
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+.oneTimeKeySection {
+padding: 0 20px;
+text-align: center;
+margin: 40px auto 0;
+max-width: 540px;
+}
+
+.keyList {
+    padding: 5px 20px 40px
+}
+
+
+.keySubmitForm{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width:80%;
+    margin: 0 auto;
+}
+
+#keyHeader {text-align: center;}
+
+
+
+#keyInput {
+    background-color: #EFEFEF;
+    border: 1px solid #E3E2E2;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+#keySubmit {
+background-color: #BE0404;
+color: white;
+font-size: 18px;
+font-weight: 700;
+border-radius: 28px;
+margin-bottom: 40px;
+}
+
+#QRSave {
+    background-color: #BE0404;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 28px;
+    min-width: 260px;
+    max-width: 540px;
     }
 
-    input:checked + .slider {
-        background-color: #45da18;
-    }
-    input:checked + .slider:before {
-        transform: translateX(40px);
+.close-button {
+    text-align: left;
+    padding-left: 10px;
+    font-size: 16px;
+}
+/*     *//*     *//*     *//*     *//*     */
+/* One time key ends */
+/*     *//*     *//*     *//*     *//*     */
+
+
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+/* QR code page 1 */
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+.QRSection {
+    text-align: center;
+    margin: 40px auto 40px !important;
     }
 
-    input:checked + .slider:after {
-        content: "on";
-        left: 8px;
-    }
 
+.QRSubmit {
+    height: 50px;
+    font-size: 18px;
+    width: auto;
+    margin-top: 40px;;
+}
+
+.QRMake {
+    margin-top: 40px;
+}
+
+#buttonText {
+    font-size: 18px;
+    padding: 10px 0;
+}
+/*     *//*     *//*     *//*     *//*     */
+/* QR Page ENDS */
+/*     *//*     *//*     *//*     *//*     */
+
+
+
+
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+/* QRCode page 2 */
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+.QRformContainer {
+    background-color: white;
+    box-shadow: 0 0 6px #C4C4C4;
+    border-radius: 22px;
+    padding: 16px 20px;
+    width: 90%;
+    text-align: center;
+    margin: 40px auto 40px !important;
+}
+
+#QRC2Header {
+    text-align: center;
+    margin: 16px 8px;
+}
+
+.QRCodeForm {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.QRInput {
+    margin: 0;
+    border-radius: 5px;
+    border: 1px solid #E3E2E2;
+    padding: 0 10px;
+}
+
+#QRC2Body {
+    font-size: 12px;
+text-align: center;
+width: 80%;
+margin: 0 auto;}
+
+
+
+.QRCodeInfoContainer {
+    margin: 20px auto 20px;
+    text-decoration: underline;
+    width: 80%;
+    text-align: center;
+}
+/*     *//*     *//*     *//*     *//*     */
+/* QRCode page 2 ENDS */
+/*     *//*     *//*     *//*     *//*     */
+
+
+
+
+
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+/* Settings page */
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+    
     .SettingsMenu {
         max-width: 560px;
         margin:0 auto;
@@ -1056,10 +1137,7 @@ width: 75%;
     padding: 0 20px;
 }
 
-.disabled {
-    color: #CCCCCC !important;
-    border-color: #CCCCCC !important;
-}
+
 
 .important {
     background-color: #EFEFEF;
@@ -1127,39 +1205,9 @@ h1#SettingsH2{
 
 
 
-#overlay1 {
-    position: absolute;
-    opacity: 1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    pointer-events: none;
-    filter: blur(8px);
-}
 
-#SettingsOverlay.active {
-    opacity: 1;
-pointer-events: all;} 
 
-.modal4 {
-    position: fixed;
-    top: 30%;
-    left: 14%;
-    transform: translate(-50%, -50%) scale(0); 
-    background-color: rgba(242, 242, 242,0.9);
-    border-radius: 14px;
-    z-index: 4;
-    width: 270px;
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-    transition: 100ms ease-in-out;}
 
-.modal4.active {
-    transform: scale(1);
-}
 
 
 #ToggleImage {
@@ -1173,7 +1221,7 @@ pointer-events: all;}
     align-items: center;
 }
 
-#overlayS {
+/* #overlayS {
     position: absolute;
     opacity: 0;
     top: 0;
@@ -1189,7 +1237,7 @@ pointer-events: all;}
 #overlayS.active {opacity: 1;
     pointer-events: all;
 
-}
+} */
 
 .CovidSettingsButton {
     width: 50px;
@@ -1231,12 +1279,18 @@ pointer-events: all;}
         
 
 }
+/*     *//*     *//*     *//*     *//*     */
+/* Settings page  ENDS*/
+/*     *//*     *//*     *//*     *//*     */
 
 
 
+
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
     /* Restrictions page */
-
-
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
     .ColorCodeGrid {
         max-width: 540px;
         margin:0 auto;
@@ -1338,8 +1392,6 @@ text-decoration: underline;    }
 
 
 
-/* Restrctions modals */
-
 .RestrictionsCardSubheading {
     font-size: 16px;
     padding: 0 0 2px;
@@ -1350,43 +1402,17 @@ text-decoration: underline;    }
     font-size: 14px;
 }
 
-.modalR1 {
-    position: fixed;
-    top: 10%;
-    left: 14%;
-    transform: translate(-50%, -50%) scale(0); 
-    background-color: rgba(242, 242, 242,0.9);
-    border-radius: 14px;
-    z-index: 2;
-    width: 270px ;
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-    transition: 100ms ease-in-out;
-}
 
-.modalR1.active {
-    transform: scale(1);
-}
-
-li.RestrictionList {
-    list-style-type: none;
-}
-
-
-.RestrictionOverlayClose {
-    font-size: 17px;
-    font-weight: 400;
-    color: #007AFF;
-    padding: 12px 0;
-    border:1px solid #707070;
-    border-bottom-left-radius: 14px;
-    border-bottom-right-radius: 14px;
-    border-top: 1px solid #707070;
-
-}
-
-
-.LongOverlay {
-    height: 136vh !important;
-}
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+/* THE END, THANK YOU FOR YOUR PATIENCE :) */
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
+/*     *//*     *//*     *//*     *//*     */
